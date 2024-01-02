@@ -1,4 +1,4 @@
-name: "Build and push images"
+name: "Build and push amd64 images"
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        DOCKERHUB_REPOSITORY: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:amd64
+        DOCKERHUB_REPOSITORY: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:bullseye
 
       steps:
       - name: Checkout code
